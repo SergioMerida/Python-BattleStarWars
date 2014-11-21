@@ -1361,13 +1361,23 @@ __  __                        _
 
 		if gameWon:
 			#Message of congratulations when one of the two players sunk all the opposite ships
-			print "Congratulations " + str(gameWinner) + " for shooting down " + str(gameLoser) + "'s space ships! in " + str(gameTurns) + " turns!"
-			print			
-			print win2
-			print
-			print "Always two there are, no more, no less. A master and an apprentice."
-			print
-			print
+			if gameWinner == player2_name:
+				print "Congratulations" + str(gameWinner) + " for shooting down " + str(gameLoser) + "'s space ships! in " + str(gameTurns) + " turns!"
+				print str(player1_name) + "my young padawan you have been defeated."
+				print win2
+				print
+				print "The space ship number 1 was in positions", "(", player2_ship_row1, ",", player2_ship_col1, ")", "(", jugador2_fila2, ",", jugador2_columna2, ")"
+				print "The space ship number 2 was in positions", "(", player2_ship_row2, ",", player2_ship_col2, ")", "(", player2_ship_r_part2, ",", player2_ship_c_part2, ")", "(", player2_ship_r_part3, ",", player2_ship_c_part3, ")"
+				print "Train yourself to let go of everything you fear to lose."
+				print
+			else: 				
+				print "Congratulations" + str(gameWinner) + " for shooting down " + str(gameLoser) + "'s space ships! in " + str(gameTurns) + " turns!"
+				print str(player2_name) + "my young padawan you have been defeated."
+				print win2		
+				print 
+				print "The space ship number 1 was in positions", "(", player1_ship_row1, ",", player1_ship_col1, ")", "(", jugador1_fila2, ",", jugador1_columna2, ")"
+				print "The space ship number 2 was in positions", "(", player1_ship_row2, ",", player1_ship_col2, ")", "(", player1_ship_r_part2, ",", player1_ship_c_part2, ")", "(", player1_ship_r_part3, ",", player1_ship_c_part3, ")"
+				print "Train yourself to let go of everything you fear to lose."
 
 			respuesta = 0
 			while (respuesta==0):
